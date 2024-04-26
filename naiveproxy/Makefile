@@ -6,7 +6,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=naiveproxy
 PKG_VERSION:=122.0.6261.43-1
-PKG_RELEASE:=100
+PKG_RELEASE:=101
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/klzgrad/naiveproxy/tar.gz/v$(PKG_VERSION)?
@@ -72,7 +72,7 @@ define Download/CLANG
 	URL:=https://commondatastorage.googleapis.com/chromium-browser-clang/Linux_x64
 	URL_FILE:=$(CLANG_FILE)
 	FILE:=$(CLANG_FILE)
-	HASH:=skip
+	HASH:=63009892f985488f9152bc064b43e9d3be197c437f2469b83efce6293887442b
 endef
 
 PGO_VER:=6261-1707846690-1391fcc4772c0b31e214f533af5cafa87e4ccf40
@@ -81,7 +81,7 @@ define Download/PGO_PROF
 	URL:=https://storage.googleapis.com/chromium-optimization-profiles/pgo_profiles
 	URL_FILE:=$(PGO_FILE)
 	FILE:=$(PGO_FILE)
-	HASH:=skip
+	HASH:=3ee58646307e2b06c5c12eb7995b0a017c981aa7eec64a85f0be5140f8d24d9f
 endef
 
 define Build/Prepare
