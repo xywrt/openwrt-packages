@@ -91,7 +91,7 @@ jobs:
         }
         (
         git_clone https://github.com/xywrt/my-packages && mvdir my-packages
-        git_clone https://github.com/xywrt/openwrt-bypass && mvdir openwrt-bypass
+        #git_clone https://github.com/xywrt/openwrt-bypass && mvdir openwrt-bypass
         git_clone https://github.com/xywrt/luci-app-dnsfilter
         git_clone https://github.com/xywrt/aria2
         git_clone https://github.com/xywrt/luci-theme-edge
