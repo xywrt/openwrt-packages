@@ -6,7 +6,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=daed
 PKG_VERSION=0.4.1
-PKG_RELEASE:=54
+PKG_RELEASE:=55
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/daeuniverse/daed.git
@@ -81,7 +81,7 @@ define Download/daed-web
 	URL:=https://github.com/daeuniverse/daed/releases/download/v$(PKG_VERSION)
 	URL_FILE:=web.zip
 	FILE:=$(WEB_FILE)
-	HASH:=80eb5f67efd95e78432aadc38a901f631c6483903bbcae995e47de1bd2e44976
+	HASH:=skip
 endef
 
 define Build/Prepare

@@ -17,6 +17,22 @@
                 "define_connect":"1",
                 "modes":["ecm","mbim","rndis","ncm"]
             },
+            "rm500u-ea":{
+                "manufacturer_id":"2c7c",
+                "manufacturer":"quectel",
+                "platform":"unisoc",
+                "data_interface":"usb",
+                "define_connect":"1",
+                "modes":["ecm","mbim","rndis","ncm"]
+            },
+            "rm500u-cnv":{
+                "manufacturer_id":"2c7c",
+                "manufacturer":"quectel",
+                "platform":"unisoc",
+                "data_interface":"usb",
+                "define_connect":"1",
+                "modes":["ecm","mbim","rndis","ncm"]
+            },
             "rm500q-cn":{
                 "manufacturer_id":"2c7c",
                 "manufacturer":"quectel",
@@ -50,6 +66,14 @@
                 "modes":["qmi","gobinet","ecm","mbim","rndis","ncm"]
             },
             "rm502q-gl":{
+                "manufacturer_id":"2c7c",
+                "manufacturer":"quectel",
+                "platform":"qualcomm",
+                "data_interface":"usb",
+                "define_connect":"1",
+                "modes":["qmi","gobinet","ecm","mbim","rndis","ncm"]
+            },
+            "rm505q-ae":{
                 "manufacturer_id":"2c7c",
                 "manufacturer":"quectel",
                 "platform":"qualcomm",
@@ -111,7 +135,7 @@
                 "platform":"qualcomm",
                 "data_interface":"usb",
                 "define_connect":"1",
-                "modes":["qmi","gobinet","ecm","mbim","rndis"]
+                "modes":["qmi","gobinet","ecm","rndis","ncm"]
             },
             "srm825":{
                 "manufacturer_id":"2dee",
@@ -119,7 +143,15 @@
                 "platform":"qualcomm",
                 "data_interface":"usb",
                 "define_connect":"1",
-                "modes":["qmi","gobinet","ecm","mbim","rndis"]
+                "modes":["qmi","gobinet","ecm","rndis","ncm"]
+            },
+            "srm825n":{
+                "manufacturer_id":"2dee",
+                "manufacturer":"meig",
+                "platform":"qualcomm",
+                "data_interface":"usb",
+                "define_connect":"1",
+                "modes":["qmi","gobinet","ecm","rndis","ncm"]
             }
         },
         "pcie":{
@@ -145,6 +177,13 @@
                 "modes":["qmi","gobinet","mbim"]
             },
             "rm502q-gl":{
+                "manufacturer":"quectel",
+                "platform":"qualcomm",
+                "data_interface":"pcie",
+                "define_connect":"1",
+                "modes":["qmi","gobinet","mbim"]
+            },
+            "rm520n-gl":{
                 "manufacturer":"quectel",
                 "platform":"qualcomm",
                 "data_interface":"pcie",

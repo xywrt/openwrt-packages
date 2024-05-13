@@ -83,9 +83,12 @@ gobinet_dial()
     #拨号
     local at_command
     if [ "$manufacturer" = "quectel" ]; then
+        #移远不走该分支
         at_command='ATI'
     elif [ "$manufacturer" = "fibocom" ]; then
         at_command='AT$QCRMCALL=1,3'
+    elif [ "$manufacturer" = "meig" ]; then
+        at_command="AT$QCRMCALL=1,1,${define_connect},2,1"
     else
         at_command='ATI'
     fi
@@ -119,6 +122,8 @@ ecm_dial()
         at_command="AT+QNETDEVCTL=${define_connect},3,1"
     elif [ "$manufacturer" = "fibocom" ]; then
         at_command="AT+GTRNDIS=1,${define_connect}"
+    elif [ "$manufacturer" = "meig" ]; then
+        at_command="AT^NDISDUP=${define_connect},1"
     else
         at_command='ATI'
     fi
@@ -157,7 +162,7 @@ rndis_dial()
         sleep 3s
     else
         #拨号
-        ecm_dial "${at_port}" "${manufacturer}"
+        ecm_dial "${at_port}" "${manufacturer}" "${define_connect}"
     fi
 }
 
@@ -223,7 +228,7 @@ modem_network_task()
 
         #网络连接检查
         local at_command="AT+CGPADDR=${define_connect}"
-        local ipv4=$(at ${at_port} ${at_command} | grep "+CGPADDR: " | awk -F'"' '{print $2}')
+        local ipv4=$(at ${at_port} ${at_command} | grep "+CGPADDR: " | awk -F',' '{print $2}' | sed 's/"//g')
 
         if [ -z "$ipv4" ]; then
 
